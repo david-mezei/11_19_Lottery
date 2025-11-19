@@ -12,12 +12,19 @@ while len(jatekos_szamai) < 5:
     elif szam not in range(1, 91): 
         print("Megfelelő számot adj meg!")
 
-print(jatekos_szamai)
-
 # Gép
 
 while len(gep_szamai) < 5:
     szam = random.randint(1, 90)
     gep_szamai.append(szam)
 
-print(gep_szamai)
+# print(jatekos_szamai)
+# print(gep_szamai)
+
+talalat = 0
+for jatekos in jatekos_szamai:
+    for gep in gep_szamai:
+        if jatekos == gep:
+            talalat += 1
+
+print(f"Találatok száma: {talalat}")  
